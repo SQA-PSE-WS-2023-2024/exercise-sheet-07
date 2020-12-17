@@ -11,13 +11,20 @@ public class LazyHamsterGame extends SimpleHamsterGame {
 	
 
 	/**
-	 * Put the hamster code into this method. Solve the task in this method NOT in
-	 * the constructor
+	 * Creates a new LazyHamsterGame
 	 */
-	@Override
-	protected void run() {
+	public LazyHamsterGame() {
+		super();
 		this.loadTerritoryFromResourceFile("/territories/territoryExampleSheet.ter");
 		this.displayInNewGameWindow();
 		game.startGame();
+		game.setSpeed(9);
+	}
+
+	/**
+	 * ToDo: Call moveNSteps to do five steps.
+	 */
+	@Override
+	protected void run() {
 	}
 }
