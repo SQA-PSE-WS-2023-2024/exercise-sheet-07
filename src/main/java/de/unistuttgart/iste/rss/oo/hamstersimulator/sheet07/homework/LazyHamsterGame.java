@@ -1,6 +1,5 @@
 package de.unistuttgart.iste.rss.oo.hamstersimulator.sheet07.homework;
 
-import de.unistuttgart.iste.rss.oo.hamstersimulator.exceptions.FrontBlockedException;
 import de.unistuttgart.iste.rss.oo.hamstersimulator.external.model.SimpleHamsterGame;
 
 
