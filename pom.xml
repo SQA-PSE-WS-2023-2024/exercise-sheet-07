@@ -7,23 +7,14 @@
     <version>1.0.0</version>
 
 	<properties>
-		<hamster.version>3.1</hamster.version>
+		<hamster.version>4.0.0</hamster.version>
     </properties>
 
-	<repositories>
-		<repository>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<id>bintray-snowball77-RSS-Hamstersimulator</id>
-			<name>bintray</name>
-			<url>https://dl.bintray.com/snowball77/RSS-Hamstersimulator</url>
-		</repository>
-	</repositories>
+	
 
 	<dependencies>
 		<dependency>
-            <groupId>de.unistuttgart.iste.rss.oo.hamstersimulator</groupId>
+            <groupId>de.hamstersimulator.objectsfirst</groupId>
             <artifactId>main</artifactId>
             <version>${hamster.version}</version>
         </dependency>
@@ -35,9 +26,9 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
 				<configuration>
-					<release>15</release>
-					<source>15</source>
-					<target>15</target>
+					<release>16</release>
+					<source>16</source>
+					<target>16</target>
 				</configuration>
             </plugin>
 			<plugin>

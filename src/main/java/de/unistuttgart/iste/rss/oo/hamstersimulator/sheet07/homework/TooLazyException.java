@@ -1,6 +1,6 @@
 package de.unistuttgart.iste.rss.oo.hamstersimulator.sheet07.homework;
 
-import de.unistuttgart.iste.rss.oo.hamstersimulator.exceptions.HamsterException;
+import de.hamstersimulator.objectsfirst.exceptions.HamsterException;
 
 /**
  * @author zimmersn
