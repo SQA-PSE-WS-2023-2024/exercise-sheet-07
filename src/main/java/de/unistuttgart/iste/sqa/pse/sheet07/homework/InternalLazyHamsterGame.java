@@ -1,8 +1,8 @@
 package de.unistuttgart.iste.sqa.pse.sheet07.homework;
 
-import de.hamstersimulator.objectsfirst.inspector.InspectableSimpleHamsterGame;
+import de.hamstersimulator.objectsfirst.external.simple.game.SimpleHamsterGame;
 
-public abstract class InternalLazyHamsterGame extends InspectableSimpleHamsterGame {
+public abstract class InternalLazyHamsterGame extends SimpleHamsterGame {
 	/**
 	 * This constructor is used for loading a territory for the game and for displaying it.
 	 */

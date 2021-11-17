@@ -13,7 +13,7 @@
 	<dependencies>
 		<dependency>
             <groupId>de.hamstersimulator.objectsfirst</groupId>
-            <artifactId>inspector</artifactId>
+            <artifactId>main</artifactId>
             <version>${hamster.version}</version>
         </dependency>
 	</dependencies>
