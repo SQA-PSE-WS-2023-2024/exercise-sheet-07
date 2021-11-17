@@ -1,21 +1,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>de.unistuttgart.iste.rss.oo.hamstersimulator</groupId>
+	<groupId>de.unistuttgart.iste.sqa.pse</groupId>
 	<artifactId>exercise-sheet-7</artifactId>
 	<name>Hamster Simulator Root Project</name>
     <version>1.0.0</version>
 
 	<properties>
-		<hamster.version>4.0.0</hamster.version>
+		<hamster.version>4.2.0</hamster.version>
     </properties>
-
-	
 
 	<dependencies>
 		<dependency>
             <groupId>de.hamstersimulator.objectsfirst</groupId>
-            <artifactId>main</artifactId>
+            <artifactId>inspector</artifactId>
             <version>${hamster.version}</version>
         </dependency>
 	</dependencies>
@@ -39,7 +37,7 @@
 					<execution>
 						<id>LazyHamsterGameApp</id>
 						<configuration>
-							<mainClass>de.unistuttgart.iste.rss.oo.hamstersimulator.sheet07.homework.LazyHamsterGameApp</mainClass>
+							<mainClass>de.unistuttgart.iste.sqa.pse.sheet07.homework.LazyHamsterGameApp</mainClass>
 						</configuration>
 					</execution>
 				</executions>
