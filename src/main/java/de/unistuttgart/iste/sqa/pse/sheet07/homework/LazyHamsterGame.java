@@ -6,7 +6,7 @@ package de.unistuttgart.iste.sqa.pse.sheet07.homework;
 public class LazyHamsterGame extends InternalLazyHamsterGame {
 	
 	/**
-     * Put the hamster code into this method. Solve the task in this method!
+     * Put the hamster code into this method.
      */
 	@Override
 	protected void hamsterRun() {
