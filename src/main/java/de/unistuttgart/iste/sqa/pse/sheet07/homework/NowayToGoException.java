@@ -1,4 +1,4 @@
-package de.unistuttgart.iste.rss.oo.hamstersimulator.sheet07.homework;
+package de.unistuttgart.iste.sqa.pse.sheet07.homework;
 
 import de.hamstersimulator.objectsfirst.exceptions.HamsterException;
 

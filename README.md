@@ -1,2 +1,2 @@
 # About
-This is the repository needed for PSE WS 2020 excercise sheet 7
+This is the repository needed for PSE WS 2021 excercise sheet 7

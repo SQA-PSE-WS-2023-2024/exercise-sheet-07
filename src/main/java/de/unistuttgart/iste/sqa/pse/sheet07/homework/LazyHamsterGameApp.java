@@ -1,4 +1,4 @@
-package de.unistuttgart.iste.rss.oo.hamstersimulator.sheet07.homework;
+package de.unistuttgart.iste.sqa.pse.sheet07.homework;
 
 public class LazyHamsterGameApp {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
 open module exercise {
-    requires de.hamstersimulator.objectsfirst.main;
-    exports de.unistuttgart.iste.rss.oo.hamstersimulator.sheet07.homework;
+	requires de.hamstersimulator.objectsfirst.main;
+    exports de.unistuttgart.iste.sqa.pse.sheet07.homework;
 }
