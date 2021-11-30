@@ -1,7 +1,7 @@
 package de.unistuttgart.iste.sqa.pse.sheet07.presence;
 
 /**
- * Write a description of class Address here.
+ * class representing an address, do NOT modify!
  *
  * @author (your name)
  * @version (a version number or a date)
