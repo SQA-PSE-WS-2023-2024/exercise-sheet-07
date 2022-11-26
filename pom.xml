@@ -1,38 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>de.unistuttgart.iste.sqa.pse</groupId>
 	<artifactId>exercise-sheet-07</artifactId>
-	<name>Hamster Simulator Root Project</name>
-    <version>1.0.0</version>
+	<version>1.0.0</version>
+	<name>Exercise Sheet 07</name>
 
 	<properties>
-		<hamster.version>4.3.4</hamster.version>
-    </properties>
+		<hamster.version>5.0.0</hamster.version>
+		<formatter.version>2.27.2</formatter.version>
+		<java.format.version>2.27.0</java.format.version>
+		<java.version>17</java.version>
+	</properties>
 
 	<dependencies>
 		<dependency>
-            <groupId>de.hamstersimulator.objectsfirst</groupId>
-            <artifactId>main</artifactId>
-            <version>${hamster.version}</version>
-        </dependency>
+			<groupId>de.hamstersimulator.objectsfirst</groupId>
+			<artifactId>main</artifactId>
+			<version>${hamster.version}</version>
+		</dependency>
 	</dependencies>
 
 	<build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.10.1</version>
 				<configuration>
-					<release>16</release>
-					<source>16</source>
-					<target>16</target>
+					<release>${java.version}</release>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<parameters>true</parameters>
 				</configuration>
-            </plugin>
+			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
-				<version>3.0.0</version>
+				<version>3.1.0</version>
 				<executions>
 					<execution>
 						<id>LazyHamsterGameApp</id>
@@ -42,6 +47,30 @@
 					</execution>
 				</executions>
 			</plugin>
-        </plugins>
-    </build>
+			<plugin>
+				<!-- formatter, check with '$MVN spotless:check' or format with '$MVN spotless:apply' -->
+				<groupId>com.diffplug.spotless</groupId>
+				<artifactId>spotless-maven-plugin</artifactId>
+				<version>${formatter.version}</version>
+				<configuration>
+					<java>
+						<palantirJavaFormat>
+							<version>${java.format.version}</version>
+						</palantirJavaFormat>
+						<indent>
+							<tabs>true</tabs>
+							<spacesPerTab>4</spacesPerTab>
+						</indent>
+					</java>
+					<pom>
+						<sortPom></sortPom>
+						<indent>
+							<tabs>true</tabs>
+							<spacesPerTab>2</spacesPerTab>
+						</indent>
+					</pom>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
