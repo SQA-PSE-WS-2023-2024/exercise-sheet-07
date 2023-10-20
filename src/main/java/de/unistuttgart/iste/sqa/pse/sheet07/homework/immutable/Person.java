@@ -1,36 +1,36 @@
 package de.unistuttgart.iste.sqa.pse.sheet07.homework.immutable;
 
-import java.util.*;
-
 /**
- * Represents a person with a name and parents.
+ * Represents a person with a name and an optional spouse. The represented
+ * persons come from a slightly odd society, where each person must have
+ * one spouse for their entire lifetime. 
  */
 public class Person {
 	// @ private instance invariant name != null && name.length() > 0;
-	// @ private instance invariant parenstsName >= ;
+	// @ private instance invariant spouse != null;
 
 	public String name;
-	public List<String> parentsName;
+	public Person spouse;
 
 	/*@
 	@ requires name != null && name.length() > 0;
-	@ requires parentsName != null &&  parentsName.size() <= 2
+	@ requires spouse != null;
 	@ ensures this.name == name;
-	@ ensures this.parentsName == parentsName;
+	@ ensures this.spouse == spouse;
 	@*/
 	/**
 	 * Creates a new person with the given name.
 	 * @param name Name of the person.
-	 * @param parentsName Names of parents of this person
+	 * @param spouse Spouse of this person
 	 * @throws IllegalArgumentException If the preconditions are not satisfied.
 	 */
-	public Person(final String name, final List<String> parentsName) throws IllegalArgumentException {
-		if (name == null || name.length() == 0 || parentsName == null || parentsName.size() >= 3) {
+	public Person(final String name, final Person spouse) throws IllegalArgumentException {
+		if (name == null || name.length() == 0 || spouse == null) {
 			throw new IllegalArgumentException(
-					"A person may not have a null or empty name, and parents must not be null nor be there more than 2 parents");
+					"A person may not have a null or empty name, and the spouse must not be null");
 		}
 		this.name = name;
-		this.parentsName = parentsName;
+		this.spouse = spouse;
 	}
 
 	/*@
@@ -44,13 +44,13 @@ public class Person {
 	}
 
 	/*@
-	@ ensures \result == parents;
+	@ ensures \result == spouse;
 	@*/
 	/**
-	 * @return This person's parents.
+	 * @return This person's spouse.
 	 */
-	public /*@ pure @*/ List<String> getParentsName() {
-		return parentsName;
+	public /*@ pure @*/ Person getSpouse() {
+		return spouse;
 	}
 
 	/*@
@@ -70,18 +70,18 @@ public class Person {
 	}
 
 	/*@
-	@ requires parents != null && parentsName.size() <= 2;
-	@ ensures this.parentsName == parentsName;
+	@ requires spouse != null && !spouse.equals(this);
+	@ ensures this.spouse == spouse;
 	@*/
 	/**
-	 * Sets this person's parents names .
-	 * @param parents The new parents name.
+	 * Sets this person's spouse .
+	 * @param spouse The new spouse.
 	 * @throws IllegalArgumentException If the preconditions are not satisfied.
 	 */
-	public void setParentsName(final List<String> parentsName) throws IllegalArgumentException {
-		if (parentsName == null || parentsName.size() > 3) {
-			throw new IllegalArgumentException("A pesons parents can never be null nor be there more than 2 parents ");
+	public void setSpouse(final Person spouse) throws IllegalArgumentException {
+		if (spouse == null || spouse.equals(this)) {
+			throw new IllegalArgumentException("A persons spouse can never be null or equal to the person themselves.");
 		}
-		this.parentsName = parentsName;
+		this.spouse = spouse;
 	}
 }

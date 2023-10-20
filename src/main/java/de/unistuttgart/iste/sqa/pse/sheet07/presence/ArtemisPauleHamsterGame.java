@@ -19,6 +19,6 @@ public class ArtemisPauleHamsterGame extends SimpleHamsterGame {
 
 	@Override
 	protected void run() {
-		// Put your code for part A exercise 1 here.
+		// Put your code for part A exercise 2 here.
 	}
 }
