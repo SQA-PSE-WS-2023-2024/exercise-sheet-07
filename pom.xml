@@ -8,9 +8,9 @@
 	<name>Exercise Sheet 07</name>
 
 	<properties>
-		<hamster.version>5.0.0</hamster.version>
-		<formatter.version>2.27.2</formatter.version>
-		<java.format.version>2.27.0</java.format.version>
+		<hamster.version>5.0.1</hamster.version>
+		<formatter.version>2.40.0</formatter.version>
+		<java.format.version>2.38.0</java.format.version>
 		<java.version>17</java.version>
 	</properties>
 
@@ -26,7 +26,7 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.10.1</version>
+				<version>3.11.0</version>
 				<configuration>
 					<release>${java.version}</release>
 					<source>${java.version}</source>
