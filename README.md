@@ -15,6 +15,12 @@ In the presence part you have to use the class you created and in the homework p
 * Open and run in VSCode
 * Unsupported: Run via Maven:
   ```sh 
-    mvn clean compile exec:java@LazyHamsterGameApp
+    mvn clean compile exec:java@PainterPauleHamsterGameApp
   ```
-  and you have to add your class to the `pom.xml`-file and run it similar to the `LazyHamsterGameApp`.
+  ```sh 
+    mvn clean compile exec:java@PlainSpringCleaningHamsterGameApp
+  ```
+  ```sh 
+    mvn clean compile exec:java@SpringCleaningHamsterGameApp
+  ```
+  

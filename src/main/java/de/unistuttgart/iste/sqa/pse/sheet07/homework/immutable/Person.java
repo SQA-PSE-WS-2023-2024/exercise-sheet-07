@@ -1,62 +1,61 @@
 package de.unistuttgart.iste.sqa.pse.sheet07.homework.immutable;
 
+import java.util.Date;
 /**
- * Represents a person with a name and an optional spouse. The represented
- * persons come from a slightly odd society, where each person must have
- * one spouse for their entire lifetime. 
+ * Represents a person with a name and birthdate. 
+ * 
+ * @author your name
  */
 public class Person {
-	// @ private instance invariant name != null && name.length() > 0;
-	// @ private instance invariant spouse != null;
-
+	//@ private instance invariant name != null && name.length() > 0;
+	//@ private instance invariant birthDate != null;
+	
 	public String name;
-	public Person spouse;
-
+	public Date birthDate;
+	
 	/*@
-	@ requires name != null && name.length() > 0;
-	@ requires spouse != null;
-	@ ensures this.name == name;
-	@ ensures this.spouse == spouse;
-	@*/
+	  @ requires name != null && name.length() > 0;
+	  @ requires birthDate != null;
+	  @ ensures this.name == name;
+	  @ ensures this.birthDate == birthDate;
+	  @*/
 	/**
-	 * Creates a new person with the given name.
+	 * Creates a new person with the given name and birthdate.
+	 * 
 	 * @param name Name of the person.
-	 * @param spouse Spouse of this person
-	 * @throws IllegalArgumentException If the preconditions are not satisfied.
-	 */
-	public Person(final String name, final Person spouse) throws IllegalArgumentException {
-		if (name == null || name.length() == 0 || spouse == null) {
-			throw new IllegalArgumentException(
-					"A person may not have a null or empty name, and the spouse must not be null");
+	 * @param birthDate Birth date of the person.
+	*/
+	public Person(final String name, final Date birthDate) {
+		if (name == null || name.length() == 0) {
+			throw new IllegalArgumentException("A person may not have a null or empty name");
+		}
+		if (birthDate == null) {
+			throw new IllegalArgumentException("A person's birth date must not be null.");
 		}
 		this.name = name;
-		this.spouse = spouse;
+		this.birthDate = birthDate;
 	}
+	
 
-	/*@
-	@ ensures \result == name;
-	@*/
 	/**
 	 * @return This person's name.
 	 */
 	public /*@ pure @*/ String getName() {
 		return name;
 	}
+	
 
-	/*@
-	@ ensures \result == spouse;
-	@*/
 	/**
-	 * @return This person's spouse.
+	 * @return This person's birth date.
 	 */
-	public /*@ pure @*/ Person getSpouse() {
-		return spouse;
+	public /*@ pure @*/ Date getBirthDate() {
+		return birthDate;
 	}
-
+	
 	/*@
-	@ requires name != null;
-	@ ensures this.name == name;
-	@*/
+	  @ requires name != null;
+	  @ ensures this.name == name;
+	  @*/
 	/**
 	 * Sets this person's name.
 	 * @param name The new name.
@@ -68,20 +67,21 @@ public class Person {
 		}
 		this.name = name;
 	}
-
+	
 	/*@
-	@ requires spouse != null && !spouse.equals(this);
-	@ ensures this.spouse == spouse;
-	@*/
+	  @ requires birthDate != null;
+	  @ ensures this.birthDate == birthDate;
+	  @*/
 	/**
-	 * Sets this person's spouse .
-	 * @param spouse The new spouse.
-	 * @throws IllegalArgumentException If the preconditions are not satisfied.
+	 * Sets this person's birth date.
+	 * 
+	 * @param birthDate The new birth date.
 	 */
-	public void setSpouse(final Person spouse) throws IllegalArgumentException {
-		if (spouse == null || spouse.equals(this)) {
-			throw new IllegalArgumentException("A persons spouse can never be null or equal to the person themselves.");
+	public void setBirthDate(final Date birthDate) {
+		if (birthDate == null) {
+			throw new IllegalArgumentException("A person's birth date must not be null.");
 		}
-		this.spouse = spouse;
+		this.birthDate = birthDate;
 	}
+	
 }

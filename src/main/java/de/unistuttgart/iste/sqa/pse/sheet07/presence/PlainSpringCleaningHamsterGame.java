@@ -5,13 +5,13 @@ import de.hamstersimulator.objectsfirst.external.simple.game.SimpleHamsterGame;
 /**
  * This class is used to solve some easy tasks.
  */
-public class ArtemisPauleHamsterGame extends SimpleHamsterGame {
+public class PlainSpringCleaningHamsterGame extends SimpleHamsterGame {
 
 	/**
 	 * Creates a new ArtemisPauleHamsterGame.<br>
 	 * Do not modify!
 	 */
-	public ArtemisPauleHamsterGame() {
+	public PlainSpringCleaningHamsterGame() {
 		this.loadTerritoryFromResourceFile("/territories/ArtemisPaule.ter");
 		this.displayInNewGameWindow();
 		game.startGame();

@@ -40,9 +40,21 @@
 				<version>3.1.0</version>
 				<executions>
 					<execution>
-						<id>LazyHamsterGameApp</id>
+						<id>PlainSpringCleaningHamsterGameApp</id>
 						<configuration>
-							<mainClass>de.unistuttgart.iste.sqa.pse.sheet07.homework.LazyHamsterGameApp</mainClass>
+							<mainClass>de.unistuttgart.iste.sqa.pse.sheet07.precense.PlainSpringCleaningHamsterGameApp</mainClass>
+						</configuration>
+					</execution>
+					<execution>
+						<id>SpringCleaningHamsterGameApp</id>
+						<configuration>
+							<mainClass>de.unistuttgart.iste.sqa.pse.sheet07.precense.SpringCleaningHamsterGameApp</mainClass>
+						</configuration>
+					</execution>
+					<execution>
+						<id>PainterPauleHamsterGameApp</id>
+						<configuration>
+							<mainClass>de.unistuttgart.iste.sqa.pse.sheet07.homework.painter.PainterPauleHamsterGameApp</mainClass>
 						</configuration>
 					</execution>
 				</executions>
