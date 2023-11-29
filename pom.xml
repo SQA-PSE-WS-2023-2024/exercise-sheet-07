@@ -42,13 +42,13 @@
 					<execution>
 						<id>PlainSpringCleaningHamsterGameApp</id>
 						<configuration>
-							<mainClass>de.unistuttgart.iste.sqa.pse.sheet07.precense.PlainSpringCleaningHamsterGameApp</mainClass>
+							<mainClass>de.unistuttgart.iste.sqa.pse.sheet07.presence.PlainSpringCleaningHamsterGameApp</mainClass>
 						</configuration>
 					</execution>
 					<execution>
 						<id>SpringCleaningHamsterGameApp</id>
 						<configuration>
-							<mainClass>de.unistuttgart.iste.sqa.pse.sheet07.precense.SpringCleaningHamsterGameApp</mainClass>
+							<mainClass>de.unistuttgart.iste.sqa.pse.sheet07.presence.SpringCleaningHamsterGameApp</mainClass>
 						</configuration>
 					</execution>
 					<execution>
