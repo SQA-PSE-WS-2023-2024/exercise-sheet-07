@@ -34,6 +34,10 @@ public class PainterPauleHamsterGame extends SimpleHamsterGame {
 
 	/**
 	 * Calculate paules distance to the next wall.
+	 * 
+	 * The Distance to the next wall is the number of free fields between paule and
+	 * the next wall, e.g., if paule is standing directly in front of a wall, the
+	 * distance is zero.
 	 *
 	 * (Only Works, if the territory is quadratic and has no inner walls)
 	 *
@@ -43,16 +47,16 @@ public class PainterPauleHamsterGame extends SimpleHamsterGame {
 		int size = game.getTerritory().getTerritorySize().getColumnCount();
 		switch (paule.getDirection()) {
 			case NORTH: {
-				return paule.getLocation().getRow();
+				return paule.getLocation().getRow() - 1;
 			}
 			case EAST: {
-				return size - paule.getLocation().getColumn();
+				return size - paule.getLocation().getColumn() - 2;
 			}
 			case SOUTH: {
-				return size - paule.getLocation().getRow();
+				return size - paule.getLocation().getRow() - 2;
 			}
 			case WEST: {
-				return paule.getLocation().getColumn();
+				return paule.getLocation().getColumn() - 1;
 			}
 			default:
 				throw new IllegalArgumentException("Unexpected value: " + paule.getDirection());
